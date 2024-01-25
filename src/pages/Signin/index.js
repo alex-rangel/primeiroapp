@@ -1,29 +1,22 @@
 import React from "react"
-import {Alert, Text} from "react-native"
-import {
-    Box,
-    Titulo,
-    Texto,
-    Input,
-    Botao,
-    Link
-} from './style'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import{ Box, Title, Text, Input, Spacer, Button} from "../../componentes"
 
+const SignUp = () => {
 
-const SignIn = () => {
-
-  return <Box>
-    
-            <Titulo>LOOKAPP</Titulo>
-            <Texto>SignIn my account.</Texto>
-            <Input placeholder="E-mail" placeholderTextColor="lightgray"/>
-            <Input margin="40px" placeholder="Password" placeholderTextColor="lightgray"/>
-            <Botao><Text>Sigin into my account</Text></Botao>  
-            <Link onPress={()=>alert('teste')}>Create new account</Link>
-            <Icon name="star" size={50} color="black" />
+  return <Box background="light" justify="center" align="center" hasPadding>
+             <Title bold variant="big">LOOKUP</Title>
+             <Spacer/>
+             <Text bold color="dark" >SignIn my account.</Text>
+             <Spacer size="40px"/>
+             <Input placeholder="E-mail" placeholderTextColor="lightgray"/>
+             <Spacer/>
+             <Input placeholder="Password" placeholderTextColor="lightgray" secureTextEntry/>
+             <Spacer size="50px"/>
+             <Button block><Text color="light">SignIn my account</Text></Button>  
+             <Spacer/>
+             <Text underline onPress={()=> alert('teste')}>Create new account</Text>
           </Box>
 };
 
 
-export default SignIn;
+export default SignUp;

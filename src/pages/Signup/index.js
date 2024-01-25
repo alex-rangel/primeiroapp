@@ -1,25 +1,22 @@
 import React from "react"
-import {Alert, Text} from "react-native"
-import {
-    Box,
-    Titulo,
-    Texto,
-    Input,
-    Botao,
-    Link
-} from './style'
-
+import{ Box, Title, Text, Input, Spacer, Button} from "../../componentes"
 
 const SignUp = () => {
 
-  return <Box>
-            <Titulo>Create new account.</Titulo>
-            <Texto>Enter your details below:</Texto>
-            <Input placeholder="Nome" placeholderTextColor="lightgray"/>
-            <Input placeholder="E-mail" placeholderTextColor="lightgray"/>
-            <Input margin='60px' placeholder="Password" placeholderTextColor="lightgray"/>
-            <Botao><Text>Create new account</Text></Botao>  
-            <Link onPress={()=>alert('teste')}>Back to signin</Link>
+  return <Box background="light" justify="center" align="center" hasPadding>
+             <Title bold>Create new account.</Title>
+             <Spacer/>
+             <Text>Enter your details below:</Text>
+             <Spacer size="40px"/>
+             <Input placeholder="Nome" placeholderTextColor="lightgray"/>
+             <Spacer/>
+             <Input placeholder="E-mail" placeholderTextColor="lightgray"/>
+             <Spacer/>
+             <Input placeholder="Password" placeholderTextColor="lightgray" secureTextEntry/>
+             <Spacer size="50px"/>
+             <Button block><Text color="light">Create new account</Text></Button>  
+             <Spacer/>
+             <Text underline onPress={()=> alert('teste')}>Back to signin</Text>
           </Box>
 };
 
