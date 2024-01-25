@@ -6,11 +6,13 @@ export const Box = styled.View`
  overflow: hidden;
  flex: ${(props) => (props.height ? "none" : 1)};
  width: ${(props) => (props.fluid ? "100%" : props.width || "auto")};
+ max-width: ${(props) => (props.fluid ? "100%" : props.width || "auto")};
  height: ${(props) => props.height || "auto"};
  margin: ${(props) => props.spacing || 0};
  flex-direction: ${(props) => (props.row ? "row" : "column")};
  justify-content: ${(props) => props.justify || "flex-start"};
  align-items: ${(props) => props.align || "flex-start"};
+ border: ${(props) => (props.border ? `1px solid ${colors.muted}` : "none")};
  padding: ${(props) => (props.hasPadding ? "20px" : "0px")};
  border-radius: ${(props) => props.radius || "0px"};
  background-color: ${(props) =>
@@ -22,6 +24,7 @@ export const Box = styled.View`
 export const Title = styled.Text`
  color: ${(props) => colors[props.color || "dark"]};
  font-size: ${(props) => fonts.title.sizes[props.variant || "normal"]};
+ margin: ${(props) => props.spacing || 0};
  padding: ${(props) => (props.hasPadding ? "20px" : "0px")};
  letter-spacing: -0.8px;
  line-height: ${(props) => fonts.title.sizes[props.variant || "normal"]};
@@ -76,3 +79,21 @@ export const Input = styled.TextInput.attrs({
   border: 1px solid ${colors.muted};
   color: ${colors.dark};
   `
+  export const Touchable = styled.TouchableOpacity`
+  display: flex;
+  overflow: hidden;
+  flex: ${(props) => (props.height ? "none" : 1)};
+  width: ${(props) => (props.fluid ? "100%" : props.width || "auto")};
+  max-width: ${(props) => (props.fluid ? "100%" : props.width || "auto")};
+  height: ${(props) => props.height || "auto"};
+  margin: ${(props) => props.spacing || 0};
+  flex-direction: ${(props) => (props.row ? "row" : "column")};
+  justify-content: ${(props) => props.justify || "flex-start"};
+  align-items: ${(props) => props.align || "flex-start"};
+  padding: ${(props) => (props.hasPadding ? "20px" : "0px")};
+  border-radius: ${(props) => props.radius || "0px"};
+  background-color: ${(props) =>
+    props.background
+      ? colors[props.background] || props.background
+      : "transparent"};
+ `;
