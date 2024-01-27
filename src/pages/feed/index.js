@@ -1,12 +1,14 @@
 import React from "react";
-import { Box } from "../../componentes";
-import Header from "../../componentes/Header"
+import { Box, Text} from "../../componentes"
+import Header from "../../componentes/Header";
+import StoryList from "../../componentes/Story/storylist";
 
-const Feed = ()=>{
+const Feed = () => {
     return(
-        <Box background="light">
-            <Header/>
-        </Box>
+    <Box background="light">
+        <Header/>
+        <StoryList/>
+    </Box>
     )
 }
 
