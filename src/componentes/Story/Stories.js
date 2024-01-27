@@ -15,7 +15,7 @@ const Stories = () =>{
                 >
                     <Cover circle
                         spacing="5px"
-                        image="https://cinepop.com.br/wp-content/uploads/2023/01/lanterna-verde-john-stewart.jpg.webp"
+                        image="https://cursinhoparamedicina.com.br/wp-content/uploads/2022/10/Paisagem-1.jpg"
                     ></Cover>
                     <Box justify="flex-end">
                         <Text spacing="0px 5px">Alex Rangel</Text>
