@@ -1,13 +1,17 @@
 import React from "react";
-import { Box, Text} from "../../componentes"
+import { Box, ScrollView} from "../../componentes"
 import Header from "../../componentes/Header";
 import StoryList from "../../componentes/Story/storylist";
+import Post from "../../componentes/Posts";
 
 const Feed = () => {
     return(
     <Box background="light">
         <Header/>
-        <StoryList/>
+        <ScrollView>
+            <StoryList/>
+            <Post/>
+        </ScrollView>
     </Box>
     )
 }
