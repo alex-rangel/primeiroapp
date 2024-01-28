@@ -5,4 +5,4 @@ import SignIn from './src/pages/Signin';
 import Feed from './src/pages/feed'
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => Feed);
+AppRegistry.registerComponent(appName, () => Home);
